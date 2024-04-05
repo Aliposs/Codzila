@@ -11,7 +11,7 @@ def receive_thread(Mass):
 # establish socket
 sokt = socket(AF_INET, SOCK_STREAM)
 # define port number and ip address
-ip_address = "192.168.56.1"
+ip_address = "127.0.0.1"
 port_number = 2004
 sokt.connect((ip_address, port_number))
 print("Connection Successed!")
