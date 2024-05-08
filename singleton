@@ -1,0 +1,17 @@
+class Database:
+    connect_request = None
+
+    def __new__(cls):
+        if cls.connect_request is None:
+            cls.connect_request = super().__new__(cls)
+            cls.connect_request.connection = "Database Connection"
+        return cls.connect_request
+
+db1 = Database()
+db2 = Database()
+
+print(db1.connection)  
+print(db2.connection) 
+
+db1.connection = "New Connection"
+print(db2.connection)  
